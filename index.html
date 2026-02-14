@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
+    <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
-    <center>
+    
     <div class="container">
         <h1>Game</h1>
         <div class="ginput">
@@ -19,51 +20,9 @@
             <p id="computer-choice"></p>
         </div>
     </div>
-    </center>
-    <script>
-        const input=document.getElementById("input");
-        const btn=document.getElementById("btn");
-        const winOrLoose=document.getElementById("winorloose");
-        const userChoice=document.getElementById("users-choice");
-        const ComputerChoice=document.getElementById("computer-choice");
-
-        //get number fromthe user
-        //compare against the computer choice 
-        //spill out the number of the users choice and thecomputer choice 
-        //determina ife the user win or not
-        //give the user a chance to try 3 times again if they loose 
-        
-        function getComputerChoice(){
-            return Math.ceil(Math.random()*10-1)
-        }
-
-        function getUserChoice(){
-            return input.value.trim
-        }
-        function compareUsersComputer(){
-            const user=getUserChoice()
-            const computer=getComputerChoice();
-            if(isNaN(user)){
-                alert("please enter a valid number")
-                return
-            }
-            if(user<1){
-                alert("input most not be less than 1")
-            }
-             if(user>10){
-                alert("input most not be greater than 10")
-            }
-            if(user===computer){
-                winOrLoose.textContent="You win"
-                userChoice.textContent=`The number you choose is: ${user}`
-                computerChoice.textContent=`The number the compuiter choose is: ${user}`
-            }else{
-                 winOrLoose.textContent="You loose"
-                userChoice.textContent=`The number you choose is: ${user}`
-                computerChoice.textContent=`The number the compuiter choose is: ${user}`
-            }
-        }
-
+    
+    <script src="./app.js">
+       
 
     </script>
 </body>
